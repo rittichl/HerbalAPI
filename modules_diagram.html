@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Herbal Delight API - Module Overview</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: white;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .module-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .module-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 10px;
+            padding: 20px;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .module-card.core {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+        }
+
+        .module-card.product {
+            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+        }
+
+        .module-card.supply {
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+        }
+
+        .module-card.quality {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+        }
+
+        .module-card.doc {
+            background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+        }
+
+        .module-card.system {
+            background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%);
+        }
+
+        .module-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .module-features {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .module-list {
+            font-size: 12px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .module-list li {
+            margin: 5px 0;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .module-list li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 24px;
+            color: #34495e;
+            margin: 40px 0 20px 0;
+            font-weight: bold;
+        }
+
+        .summary {
+            background: #ecf0f1;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .summary h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .summary-stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: bold;
+            color: #3498db;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Herbal Delight API - Module Overview Diagram</h1>
+
+        <div class="section-title">Core System Modules</div>
+        <div class="module-grid">
+            <div class="module-card core">
+                <div class="module-title">Module 1: Authentication</div>
+                <div class="module-features">2 Features</div>
+                <ul class="module-list">
+                    <li>User Login</li>
+                    <li>User Logout</li>
+                </ul>
+            </div>
+            <div class="module-card core">
+                <div class="module-title">Module 2: User Management</div>
+                <div class="module-features">7 Features</div>
+                <ul class="module-list">
+                    <li>User Groups</li>
+                    <li>User Registration</li>
+                    <li>User Management</li>
+                </ul>
+            </div>
+            <div class="module-card core">
+                <div class="module-title">Module 3: Category</div>
+                <div class="module-features">5 Features</div>
+                <ul class="module-list">
+                    <li>Category CRUD</li>
+                    <li>Admin Control</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section-title">Product & Material Modules</div>
+        <div class="module-grid">
+            <div class="module-card product">
+                <div class="module-title">Module 4: Product Management</div>
+                <div class="module-features">9 Features</div>
+                <ul class="module-list">
+                    <li>Products CRUD</li>
+                    <li>Product Formulas</li>
+                    <li>Multi-language</li>
+                </ul>
+            </div>
+            <div class="module-card product">
+                <div class="module-title">Module 5: Material Management</div>
+                <div class="module-features">7 Features</div>
+                <ul class="module-list">
+                    <li>Materials CRUD</li>
+                    <li>Data Types</li>
+                    <li>Stock Tracking</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section-title">Supply Chain Modules</div>
+        <div class="module-grid">
+            <div class="module-card supply">
+                <div class="module-title">Module 6: Vendor & Payment</div>
+                <div class="module-features">9 Features</div>
+                <ul class="module-list">
+                    <li>Vendor Management</li>
+                    <li>Payment Types</li>
+                    <li>Contact Management</li>
+                </ul>
+            </div>
+            <div class="module-card supply">
+                <div class="module-title">Module 7: Order Management</div>
+                <div class="module-features">8 Features</div>
+                <ul class="module-list">
+                    <li>Order Creation</li>
+                    <li>Material Tracking</li>
+                    <li>Delivery Tracking</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section-title">Quality Control Module</div>
+        <div class="module-grid" style="grid-template-columns: 1fr;">
+            <div class="module-card quality">
+                <div class="module-title">Module 8: Quality Control & Inspection</div>
+                <div class="module-features">20 Features</div>
+                <ul class="module-list">
+                    <li>Audit Status Management (5)</li>
+                    <li>Quarantine System (5)</li>
+                    <li>Inspection Topics (5)</li>
+                    <li>Material Inspections (4)</li>
+                    <li>Inspection Results (1)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section-title">Documentation & Traceability Modules</div>
+        <div class="module-grid">
+            <div class="module-card doc">
+                <div class="module-title">Module 9: Label & QR Codes</div>
+                <div class="module-features">10 Features</div>
+                <ul class="module-list">
+                    <li>Label Templates</li>
+                    <li>QR Code Generation</li>
+                    <li>Composite Sheets</li>
+                </ul>
+            </div>
+            <div class="module-card doc">
+                <div class="module-title">Module 10: Document Management</div>
+                <div class="module-features">9 Features</div>
+                <ul class="module-list">
+                    <li>Document Generation</li>
+                    <li>Template Management</li>
+                    <li>BMR Generation</li>
+                </ul>
+            </div>
+            <div class="module-card doc">
+                <div class="module-title">Module 11: Image Management</div>
+                <div class="module-features">7 Features</div>
+                <ul class="module-list">
+                    <li>Image Upload</li>
+                    <li>Image Serving</li>
+                    <li>Base64 Support</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section-title">System Module</div>
+        <div class="module-grid" style="grid-template-columns: 1fr;">
+            <div class="module-card system">
+                <div class="module-title">Module 12: System Utilities</div>
+                <div class="module-features">2 Features</div>
+                <ul class="module-list">
+                    <li>Health Check Endpoint</li>
+                    <li>Image Upload Endpoint</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="summary">
+            <h2>System Summary</h2>
+            <div class="summary-stats">
+                <div class="stat">
+                    <div class="stat-number">12</div>
+                    <div class="stat-label">Modules</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">103</div>
+                    <div class="stat-label">Features</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">106</div>
+                    <div class="stat-label">API Endpoints</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">25+</div>
+                    <div class="stat-label">Controllers</div>
+                </div>
+            </div>
+            <p style="margin-top: 20px; color: #2c3e50; font-weight: bold;">Status: Production Ready</p>
+        </div>
+    </div>
+</body>
+
+</html>

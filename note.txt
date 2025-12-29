@@ -1,0 +1,75 @@
+# Main dependencies
+npm install sequelize pg pg-hstore
+npm install dotenv
+
+# TypeScript and type definitions
+npm install typescript ts-node @types/node --save-dev
+npm install @types/validator @types/express --save-dev
+npm install bcrypt express @types/express @types/bcrypt
+npm install --save-dev @types/bcrypt
+npm i --save-dev @types/cors
+npm i --save-dev @types/jsonwebtoken jsonwebtoken
+
+npm install express-validator@7.0.0
+npm install --save-dev @types/express-validator@7.0.0
+npm install --save-dev nodemon
+
+npm install qrcode
+npm install @types/qrcode --save-dev
+
+npm install canvas jimp
+npm install @types/node --save-dev  
+
+npm install multer       
+npm install @types/multer --save-dev
+
+# Sequelize types
+npm install @types/sequelize --save-dev
+
+
+npm install image-size
+npm install @types/image-size --save-dev
+
+npm install base-64
+npm install @types/base-64 --save-dev
+
+npm install docxtemplater pizzip
+npm install -D @types/pizzip
+
+npm install docxtemplater-image-module-free
+
+npm install image-size
+npm install -D @types/image-size
+
+
+# Database add column
+npx sequelize-cli migration:generate --name add-price-to-order-detail
+#Edit migration file in /migrations/ and run command below
+npx sequelize-cli db:migrate
+npx sequelize-cli db:migrate --url 'postgres://herbal:herbal@1234@localhost:5432/herbal_db?options=--search_path=public'
+
+
+# Development tools
+npm install nodemon --save-dev
+
+
+npm install --save-dev sequelize-cli
+# Initialize Sequelize:
+npx sequelize-cli init
+
+
+
+#### docker-compose 
+docker-compose build --no-cache
+docker-compose up -d
+docker-compose down
+
+
+npm run dev
+
+
+clear db version on Amazon 
+docker-compose exec db psql -U herbal -d herbal_db -c "ALTER DATABASE herbal_db REFRESH COLLATION VERSION;"
+
+clear disk space
+docker builder prune -f

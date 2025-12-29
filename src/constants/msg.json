@@ -1,0 +1,20 @@
+{
+    "0": "Success",
+    "101": "Data not found",
+    "102": "Verification failed",
+    "103": "No auth token, access denied",
+    "104": "Token verification failed, authorization denied",
+    "105": "Missing required field",
+    "106": "Wrong API Key",
+    "107": "Data already in use",
+    "108": "Data not found",
+    "109": "Unauthorized to delete data",
+    "110": "Cannot delete this data",
+    "111": "Wrong data type",
+    "112": "Wrong data format",
+    "113": "File upload error",
+    "114": "QR code already sold",
+    "115": "Data cannot update",
+    "202": "Unable to process request, please try again",
+    "500": "Internal server error"
+}

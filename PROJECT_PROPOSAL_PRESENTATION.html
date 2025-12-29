@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Herbal Delight API - Project Proposal</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/theme/white.css">
+    <style>
+        .reveal .slides section {
+            text-align: left;
+        }
+
+        .reveal h1,
+        .reveal h2,
+        .reveal h3 {
+            color: #2c3e50;
+        }
+
+        .reveal .progress {
+            color: #3498db;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .stat-box {
+            background: #3498db;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            min-width: 150px;
+        }
+
+        .stat-number {
+            font-size: 3em;
+            font-weight: bold;
+        }
+
+        .stat-label {
+            font-size: 1.2em;
+        }
+
+        .feature-list {
+            columns: 2;
+            column-gap: 40px;
+        }
+
+        .module-card {
+            background: #f8f9fa;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 4px solid #3498db;
+            border-radius: 5px;
+        }
+
+        table {
+            font-size: 0.8em;
+        }
+
+        .highlight {
+            color: #3498db;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- Title Slide -->
+            <section>
+                <h1>Herbal Delight API</h1>
+                <h2>Manufacturing & Quality Management System</h2>
+                <h3>Project Proposal Presentation</h3>
+                <p><strong>Version 1.0.0</strong> | December 2024</p>
+            </section>
+
+            <!-- Executive Summary -->
+            <section>
+                <h2>Executive Summary</h2>
+                <h3>Project Overview</h3>
+                <ul>
+                    <li>Comprehensive backend system for herbal/pharmaceutical manufacturing</li>
+                    <li>End-to-end management from procurement to finished products</li>
+                    <li>Full traceability and compliance documentation</li>
+                </ul>
+                <div class="stats">
+                    <div class="stat-box">
+                        <div class="stat-number">103</div>
+                        <div class="stat-label">Features</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">106</div>
+                        <div class="stat-label">API Endpoints</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">Modules</div>
+                    </div>
+                </div>
+                <p><strong>Status:</strong> <span class="highlight">Production Ready ✅</span></p>
+            </section>
+
+            <!-- Business Objectives -->
+            <section>
+                <h2>Business Objectives</h2>
+                <ul>
+                    <li>🎯 <strong>Streamline Manufacturing Operations</strong><br>Centralized product, material, and
+                        formula management</li>
+                    <li>✅ <strong>Ensure Quality Compliance</strong><br>Comprehensive quality control with inspection
+                        tracking</li>
+                    <li>🔍 <strong>Enable Full Traceability</strong><br>QR code-based tracking system</li>
+                    <li>📄 <strong>Automate Documentation</strong><br>Automated production document generation</li>
+                    <li>📦 <strong>Optimize Supply Chain</strong><br>Efficient vendor and order management</li>
+                    <li>📋 <strong>Maintain Regulatory Compliance</strong><br>Complete audit trails and inspection
+                        documentation</li>
+                </ul>
+            </section>
+
+            <!-- Technology Stack -->
+            <section>
+                <h2>Technology Stack</h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div>
+                        <h3>Backend Framework</h3>
+                        <ul>
+                            <li>Node.js + Express.js</li>
+                            <li>TypeScript</li>
+                            <li>RESTful API</li>
+                        </ul>
+                        <h3>Database</h3>
+                        <ul>
+                            <li>PostgreSQL</li>
+                            <li>Sequelize ORM</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Core Libraries</h3>
+                        <ul>
+                            <li>JWT + bcrypt (Auth)</li>
+                            <li>docxtemplater (Docs)</li>
+                            <li>Canvas, Jimp (Images)</li>
+                            <li>qrcode (QR Codes)</li>
+                            <li>Multer (Uploads)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- System Architecture -->
+            <section>
+                <h2>System Architecture</h2>
+                <pre style="font-size: 0.6em;"><code>
+┌─────────────────────────────────────┐
+│    Client Applications              │
+│  (Web, Mobile, External APIs)       │
+└──────────────┬──────────────────────┘
+               │
+┌──────────────▼──────────────────────┐
+│      API Layer (Express)             │
+│  - Authentication Middleware         │
+│  - Request Validation                │
+│  - Transaction ID Tracking           │
+└──────────────┬──────────────────────┘
+               │
+┌──────────────▼──────────────────────┐
+│   Business Logic Layer               │
+│  - 25+ Controllers                   │
+│  - Business Rules                    │
+└──────────────┬──────────────────────┘
+               │
+┌──────────────▼──────────────────────┐
+│   Data Access Layer                  │
+│  - Sequelize ORM                     │
+│  - Database Models                   │
+└──────────────┬──────────────────────┘
+               │
+┌──────────────▼──────────────────────┐
+│   PostgreSQL Database                │
+│  - 20+ Tables                        │
+└─────────────────────────────────────┘
+                </code></pre>
+            </section>
+
+            <!-- Feature Modules -->
+            <section>
+                <h2>12 Major Feature Modules</h2>
+                <div class="feature-list">
+                    <div class="module-card">
+                        <strong>1. Authentication</strong> (2 features)
+                    </div>
+                    <div class="module-card">
+                        <strong>2. User Management</strong> (7 features)
+                    </div>
+                    <div class="module-card">
+                        <strong>3. Category Management</strong> (5 features)
+                    </div>
+                    <div class="module-card">
+                        <strong>4. Product Management</strong> (9 features)
+                    </div>
+                    <div class="module-card">
+                        <strong>5. Material Management</strong> (7 features)
+                    </div>
+                    <div class="module-card">
+                        <strong>6. Vendor & Payment</strong> (9 features)
+                    </div>
+                    <div class="module-card">
+                        <strong>7. Order Management</strong> (8 features)
+                    </div>
+                    <div class="module-card">
+                        <strong>8. Quality Control</strong> (20 features)
+                    </div>
+                    <div class="module-card">
+                        <strong>9. Label & QR Codes</strong> (10 features)
+                    </div>
+                    <div class="module-card">
+                        <strong>10. Document Management</strong> (9 features)
+                    </div>
+                    <div class="module-card">
+                        <strong>11. Image Management</strong> (7 features)
+                    </div>
+                    <div class="module-card">
+                        <strong>12. System Utilities</strong> (2 features)
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quality Control Details -->
+            <section>
+                <section>
+                    <h2>Module 8: Quality Control</h2>
+                    <h3>20 Features for Quality Assurance</h3>
+                    <ul>
+                        <li><strong>Audit Status Management</strong> (5 features)
+                            <ul>
+                                <li>Status code and name management</li>
+                                <li>Complete CRUD operations</li>
+                            </ul>
+                        </li>
+                        <li><strong>Quarantine System</strong> (5 features)
+                            <ul>
+                                <li>Material quarantine tracking</li>
+                                <li>Due date and admit date management</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Quality Control (Continued)</h2>
+                    <ul>
+                        <li><strong>Inspection Topics</strong> (5 features)
+                            <ul>
+                                <li>Define inspection criteria</li>
+                                <li>Method and specification tracking</li>
+                            </ul>
+                        </li>
+                        <li><strong>Material Inspections</strong> (4 features)
+                            <ul>
+                                <li>Link materials to inspection requirements</li>
+                                <li>Query by material or topic</li>
+                            </ul>
+                        </li>
+                        <li><strong>Inspection Results</strong> (1 feature)
+                            <ul>
+                                <li>Record and update test results</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+
+            <!-- Key Capabilities -->
+            <section>
+                <h2>Key Capabilities</h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div>
+                        <h3>🔐 Security</h3>
+                        <ul>
+                            <li>JWT Authentication</li>
+                            <li>API Key Validation</li>
+                            <li>Role-Based Access Control</li>
+                            <li>Password Encryption</li>
+                        </ul>
+                        <h3>📊 Monitoring</h3>
+                        <ul>
+                            <li>Transaction ID Tracking</li>
+                            <li>Comprehensive Logging</li>
+                            <li>Performance Metrics</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>📄 Documentation</h3>
+                        <ul>
+                            <li>Automated Document Generation</li>
+                            <li>Template Management</li>
+                            <li>Multi-language Support</li>
+                        </ul>
+                        <h3>🔍 Traceability</h3>
+                        <ul>
+                            <li>QR Code Generation</li>
+                            <li>Product Tracking</li>
+                            <li>Audit Trails</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Feature Statistics -->
+            <section>
+                <h2>Feature Count by Category</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Endpoints</th>
+                            <th>Features</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Quality Control</td>
+                            <td>20</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>Label & QR Codes</td>
+                            <td>10</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>Product Management</td>
+                            <td>9</td>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <td>Document Management</td>
+                            <td>9</td>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <td>Vendor Management</td>
+                            <td>9</td>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <td>Order Management</td>
+                            <td>8</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td><strong>TOTAL</strong></td>
+                            <td><strong>106</strong></td>
+                            <td><strong>103</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Business Benefits -->
+            <section>
+                <h2>Business Benefits</h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div>
+                        <h3>Operational Benefits</h3>
+                        <ul>
+                            <li>⚡ <strong>Efficiency:</strong> Streamlined processes</li>
+                            <li>✅ <strong>Accuracy:</strong> Reduced errors</li>
+                            <li>📋 <strong>Compliance:</strong> Quality control</li>
+                            <li>🔍 <strong>Traceability:</strong> Product tracking</li>
+                            <li>📄 <strong>Documentation:</strong> Automated generation</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Business Benefits</h3>
+                        <ul>
+                            <li>💰 <strong>Cost Reduction:</strong> Optimized inventory</li>
+                            <li>✅ <strong>Quality Assurance:</strong> Inspection system</li>
+                            <li>📊 <strong>Regulatory Compliance:</strong> Audit-ready</li>
+                            <li>📈 <strong>Scalability:</strong> Modular architecture</li>
+                            <li>🔒 <strong>Data Integrity:</strong> Centralized management</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Project Statistics -->
+            <section>
+                <h2>Project Statistics</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Total Features</td>
+                            <td><strong>103</strong></td>
+                        </tr>
+                        <tr>
+                            <td>API Endpoints</td>
+                            <td><strong>106</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Route Modules</td>
+                            <td><strong>12</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Controllers</td>
+                            <td><strong>25+</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Database Models</td>
+                            <td><strong>20+</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Middleware Components</td>
+                            <td><strong>5+</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Deployment -->
+            <section>
+                <h2>Deployment Architecture</h2>
+                <ul>
+                    <li><strong>Docker Deployment</strong>
+                        <ul>
+                            <li>Docker Compose configuration</li>
+                            <li>Containerized services</li>
+                        </ul>
+                    </li>
+                    <li><strong>Traditional Deployment</strong>
+                        <ul>
+                            <li>Direct Node.js deployment</li>
+                            <li>PostgreSQL database</li>
+                        </ul>
+                    </li>
+                    <li><strong>Cloud Deployment</strong>
+                        <ul>
+                            <li>AWS, Azure, GCP compatible</li>
+                            <li>Scalable architecture</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Conclusion -->
+            <section>
+                <h2>Conclusion</h2>
+                <h3>Summary</h3>
+                <p>The <strong>Herbal Delight API</strong> is a comprehensive, production-ready system designed
+                    specifically for herbal/pharmaceutical manufacturing operations.</p>
+                <div class="stats" style="margin-top: 40px;">
+                    <div class="stat-box">
+                        <div class="stat-number">103</div>
+                        <div class="stat-label">Features</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">106</div>
+                        <div class="stat-label">Endpoints</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">Modules</div>
+                    </div>
+                </div>
+                <p style="margin-top: 40px;"><strong>Status:</strong> <span class="highlight">Production Ready ✅</span>
+                </p>
+            </section>
+
+            <!-- Thank You -->
+            <section>
+                <h1>Thank You</h1>
+                <h2>Questions & Discussion</h2>
+                <p><strong>Project:</strong> Herbal Delight Manufacturing & Quality Management System</p>
+                <p><strong>Version:</strong> 1.0.0</p>
+                <p><strong>Status:</strong> Production Ready</p>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            controls: true,
+            progress: true,
+            center: true,
+            transition: 'slide'
+        });
+    </script>
+</body>
+
+</html>
